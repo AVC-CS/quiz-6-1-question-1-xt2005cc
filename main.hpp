@@ -25,3 +25,27 @@ bool isPrime (int n)
     }
     return true;
 }
+
+int getNextPrime(int begin)
+{
+    int n = begin + 1;
+    while (true)
+    {
+        if (isPrime(n))
+            return n;
+        n++;
+    }
+}
+
+int getPrevPrime(int end)
+{
+    int n = end - 1;
+    while (n>1)
+    {
+        if (isPrime(n))
+            return n;
+        n--;
+    }
+    return 2;
+}
+
